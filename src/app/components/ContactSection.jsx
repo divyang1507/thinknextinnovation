@@ -3,16 +3,16 @@ import './Contact.css'
 
 export const ContactSection = ()=>{
   return(<>
-    <section id="contact" class="contactpage">
-      <div class="">
-        <h2 class="contactTitle">
+    <section id="contact" className="contactpage">
+      <div className="">
+        <h2 className="contactTitle">
           Contact us
         </h2>
-        <h4 class="contactText">Let's Connect and Create Something Amazing Together We look forward to collaborating with
+        <h4 className="contactText">Let's Connect and Create Something Amazing Together We look forward to collaborating with
           you.
         </h4>
-        <div class="contactContainer">
-          <div class="contactBox">
+        <div className="contactContainer">
+          <div className="contactBox">
             <h3>
               Get in Touch
             </h3>
@@ -29,21 +29,21 @@ export const ContactSection = ()=>{
 
 
           </div>
-          <div class=contactright>
+          <div className="contactright">
             <form>
-              <div class="inputbox">
+              <div className="inputbox">
                 <input type="text" required />
                 <label for="name"> Name</label>
               </div>
-              <div class="inputbox">
+              <div className="inputbox">
                 <input type="email" required />
                 <label for="name"> Email</label>
               </div>
-              <div class="inputbox">
+              <div className="inputbox">
                 <textarea type="text" required></textarea>
                 <label for="name"> Message</label>
               </div>
-              <button class="btn"> Contact us
+              <button className="btn"> Contact us
               </button>
 
             </form>
