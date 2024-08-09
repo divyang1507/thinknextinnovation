@@ -1,0 +1,113 @@
+
+
+.aboutContainer {
+  display: flex;
+  gap: 4rem
+}
+
+.aboutBox {
+  border-radius: 2rem;
+  color: white;
+  border: 3px solid #333333;
+  background-image: linear-gradient(to right top, #333333, black);
+  padding: 2rem;
+  height: fit-content;
+  text-align: justify;
+  flex: 1;
+}
+
+i {
+  font-size: 24px;
+  margin: 16px;
+}
+
+.valueContainer {
+  flex: 1;
+}
+
+.valueHeading {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  /* align-items: center; */
+
+}
+
+.valueHeading h3 {
+  background-color: white;
+  z-index: 1;
+}
+
+.valueHeading p {
+  top: 100%;
+  display: block;
+  position: absolute;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.valueblock {
+  display: flex;
+  padding: 1.5rem 0;
+  height: fit-content;
+  border-bottom: 1px solid black;
+  font-size: 14px;
+  color: black;
+}
+
+.valueblock .icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  padding: 1rem 1rem;
+  border-radius: 100px;
+  right: 0;
+  z-index: 1;
+  margin: 0
+}
+
+@media only screen and (max-width: 767px) {
+
+.aboutContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+  justify-content: center;
+}
+
+.aboutBox {
+  text-align: justify;
+  height: fit-content;
+}
+
+.aboutTitle,
+.contactTitle,
+.serviceTitle {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.valueContainer {
+  width: 100%;
+
+}
+
+.valueblock {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+}
+
+
+.valueHeading p {
+  display: block;
+  position: absolute;
+  top: 100%;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+}

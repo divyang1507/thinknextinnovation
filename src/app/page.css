@@ -1,3 +1,29 @@
 .home{
   height: 100vh;
 }
+
+.aboutpage,
+.contactpage,
+.servicepage {
+  margin: 4rem 6rem auto 6rem ;
+  z-index: 3;
+  height: fit-content;
+}
+
+.aboutTitle,
+.contactTitle,
+.serviceTitle {
+  text-align: center;
+  margin-bottom: 2rem;
+
+}
+@media only screen and (max-width: 767px) {
+.aboutpage,
+.contactpage,
+.servicepage {
+  margin: 4rem 1rem auto 1rem ;
+  z-index: 3;
+  height: fit-content;
+}
+
+}
