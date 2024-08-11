@@ -1,15 +1,16 @@
 "use client";
 import Link from "next/link";
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import "./Navbar.css";
 import Image from "next/image";
 import { FaBars } from "react-icons/fa";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-import { ScrollTrigger } from "scrolltrigger";
+import { scrollTrigger } from "gsap/ScrollTrigger";
 
 export const Navbar = () => {
-  gsap.registerPlugin(useGSAP, ScrollTrigger);
+  gsap.registerPlugin(useGSAP);
+  gsap.registerPlugin(ScrollTrigger);
   const [isOpen, setisOpen] = useState(false);
   const navRef = useRef(null);
   // const navRef = useRef(null);
@@ -61,49 +62,21 @@ export const Navbar = () => {
     });
   });
 
-  // useGSAP(
-  // gsap.to(navRef.ref, {
-  //   backgroundColor: "#000000",
-  //   duration: 0.5,
-  //   ScrollTrigger: {
-  //     trigger: navRef.ref,
-  //     start: "top -10%",
-  //     end: "top -11%",
-  //     scrub: true,
-  //     markers: true
-  //   },
-  // });
-  // navRef,
-  // {
-  //   from: { opacity: 0, y: 100 },
-  //   to: { opacity: 1, y: 0, duration: 1 },
-  //   // to: {
-  //   //   backgroundColor: "#000000",
-  //   //   duration: 0.5,
-  //   // },
-  // },
-  // {
-  //   start: "top -10%",
-  //   end: "top -11%",
-  //   scrub: true,
-  //   markers: true,
-  //   id: 'boxAnimation',
-  // }
-  // );
 
-  useGSAP(() => {
+  useEffect(() => {
     gsap.to(navRef.current, {
       backgroundColor: "#000000",
       duration: 0.5,
-      ScrollTrigger: {
-        trigger: 'navbar',
+      scrollTrigger: {
+        trigger: navRef.current,
+        scroller: "body",
         start: "top -10%",
         end: "top -11%",
         scrub: true,
         markers: true,
       },
     });
-  });
+  },[]);
   return (
     <>
       <nav className="navbar" ref={navRef}>
