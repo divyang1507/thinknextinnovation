@@ -6,11 +6,12 @@ import Image from "next/image";
 import { FaBars } from "react-icons/fa";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-import { scrollTrigger } from "gsap/ScrollTrigger";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import {motion, useMotionValueEvent, useScroll } from "framer-motion";
 
 export const Navbar = () => {
-  gsap.registerPlugin(useGSAP);
-  gsap.registerPlugin(ScrollTrigger);
+  const { scrollY } = useScroll()
+  gsap.registerPlugin(ScrollTrigger) 
   const [isOpen, setisOpen] = useState(false);
   const navRef = useRef(null);
   // const navRef = useRef(null);
@@ -62,21 +63,23 @@ export const Navbar = () => {
     });
   });
 
-
-  useEffect(() => {
-    gsap.to(navRef.current, {
-      backgroundColor: "#000000",
-      duration: 0.5,
-      scrollTrigger: {
-        trigger: navRef.current,
-        scroller: "body",
-        start: "top -10%",
-        end: "top -11%",
-        scrub: true,
-        markers: true,
-      },
-    });
-  },[]);
+  useMotionValueEvent(scrollY, "10", (latest) => {
+    console.log("Page scroll: ", latest)
+  })
+  // useEffect(() => {
+  //   gsap.to(navRef.current, {
+  //     backgroundColor: "#000000",
+  //     duration: 0.5,
+  //     scrollTrigger: {
+  //       trigger: navRef.current,
+  //       scroller: "body",
+  //       start: "top -10%",
+  //       end: "top -11%",
+  //       scrub: true,
+  //       markers: true,
+  //     },
+  //   });
+  // },[]);
   return (
     <>
       <nav className="navbar" ref={navRef}>

@@ -1,5 +1,7 @@
 import React from 'react'; 
 import './Service.css'
+import { MdOutlineDesignServices } from "react-icons/md";
+import { FaChartPie, FaCode, FaDatabase, FaGears } from "react-icons/fa6";
 
 export const ServiceSection= () => {
   return (
@@ -11,7 +13,7 @@ export const ServiceSection= () => {
 
             <div className="serviceBox" >
 
-              <i className="fa-solid fa-layer-group"></i>
+              <i className="fa-solid fa-layer-group"><MdOutlineDesignServices /></i>
               <h4 className="servicehead">Web Design and Devlopment</h4>
                 <p>Custom Website Design & Development: Crafting unique, responsive websites tailored to your brand,
                   including e-commerce with secure payment gateways.
@@ -19,14 +21,14 @@ export const ServiceSection= () => {
                   performance and easy content updates.</p>
             </div>
             <div className="serviceBox">
-              <i className="fa-solid fa-gear"></i>
+              <i className="fa-solid fa-gear"><FaGears/></i>
               <h4 className="servicehead">Search Engine Optimization (SEO)</h4>
                 <p>SEO & PPC Advertising: Boosting your website's search engine rankings and managing paid campaigns on
                   platforms like Google Ads to drive targeted traffic.
                   Social Media & Content Marketing: Engaging your audience on platforms like Facebook and Instagram,  creating valuable content and Email Marketing & Software Development</p>
             </div>
             <div className="serviceBox">
-              <i className="fa-solid fa-database"></i>
+              <i className="fa-solid fa-database"><FaDatabase /></i>
               <h4 className="servicehead">Custom Software Developement</h4>
                 <p>
                   Building software solutions tailored to your specific business needs.
@@ -36,7 +38,7 @@ export const ServiceSection= () => {
                 </p>
             </div>
             <div className="serviceBox">
-              <i className="fa-solid fa-code"></i>
+              <i className="fa-solid fa-code"><FaCode /></i>
               <h4 className="servicehead">IOS App Developement</h4>
                 <p>Developing mobile applications for Apple's iOS platform.
                   Android App Development: Creating mobile applications for the Android platform.
@@ -45,7 +47,7 @@ export const ServiceSection= () => {
                   IT Consulting</p>
             </div>
             <div className="serviceBox">
-              <i className="fa-solid fa-chart-pie"></i>
+              <i className="fa-solid fa-chart-pie"><FaChartPie /></i>
               <h4 className="servicehead">IT Strategy and Planning</h4>
                 <p>
                   Helping businesses develop effective IT strategies to achieve their goals.
